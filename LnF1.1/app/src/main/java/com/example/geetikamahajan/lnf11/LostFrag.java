@@ -18,15 +18,13 @@ import android.widget.TextView;
 public class LostFrag extends Fragment {
     public static String name;
     private String tab;
-    private int color, clicked;
+    private int color;
     public View v0;
     public TextView tv0;
-    private boolean flag = false;
     public T0Int delegate = null;
 
     public interface T0Int {
         public void T0btnClick();
-        public int T0Clicks();
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,8 +64,5 @@ public class LostFrag extends Fragment {
         return v0;
     }
 
-    public void T0textChange() {
 
-
-    }
 }

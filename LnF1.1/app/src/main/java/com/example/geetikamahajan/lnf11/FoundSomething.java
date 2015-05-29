@@ -18,15 +18,12 @@ import android.widget.TextView;
 public class FoundSomething extends Fragment {
     public static String name;
     private String tab;
-    private int color, clicked;
-    public View v0;
-    public TextView tv0;
-    private boolean flag = false;
+    private int color;
+    public View v1;
     public T1Int delegate = null;
 
     public interface T1Int {
         public void T1btnClick();
-        public int T0Clicks();
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,22 +49,18 @@ public class FoundSomething extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        v0 = inflater.inflate(R.layout.lost, container, false);
+        v1 = inflater.inflate(R.layout.foundsmthng, container, false);
 
-        Button b0 = (Button)v0.findViewById(R.id.button0);
-        b0.setOnClickListener(new View.OnClickListener() {
+        Button b1 = (Button)v1.findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 delegate.T1btnClick();
             }
         });
-        v0.setBackgroundResource(color);
+        v1.setBackgroundResource(color);
 
-        return v0;
+        return v1;
     }
 
-    public void T0textChange() {
-
-
-    }
 }
